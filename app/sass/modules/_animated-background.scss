@@ -1,0 +1,52 @@
+.milkwayContainer {
+	position: relative;
+	display: block;
+	background-color: #000;
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+}
+
+.milkwayContainer > * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 600px;
+
+	transform-origin: 50% 50%;
+
+  background-image:
+    radial-gradient(2px 2px at 40px 60px, #ccc, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 20px 50px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 30px 100px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 60px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 110px 90px, #ccc, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 190px 150px, #ddd, rgba(0,0,0,0));
+
+  background-repeat: repeat;
+  background-size: 200px 200px;
+
+	animation-name: movingStars;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.milkwayContainer {
+	span {
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}) {
+				animation-duration: 7s * $i;
+			}
+		}
+	}
+}
+
+@keyframes movingStars {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}

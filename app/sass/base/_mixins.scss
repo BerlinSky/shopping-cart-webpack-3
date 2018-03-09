@@ -1,0 +1,75 @@
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.eot'); // IE9 compat
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+      url('#{$src}.woff') format('woff'), // standards
+      url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+      url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+/// @param {string} $where Optional pseudoelement to target (before or after).
+@mixin icon($content: false, $where: before) {
+
+	text-decoration: none;
+
+	&:#{$where} {
+
+		@if $content {
+			content: $content;
+		}
+
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none;
+
+	}
+}
+
+@mixin headerText() {
+  font-size: _fontSize(header-text);
+  font-weight: _font(weight-heading);
+  letter-spacing: .125em;
+}
+
+@mixin footerText() {
+  font-size: _fontSize(footer-text);
+  font-weight: _font(weight);
+  letter-spacing: _font(kerning-heading);
+}
+
+@mixin accordionLabel() {
+  font-size: _fontDef(acoordion-label, font-size);
+  line-height: _fontDef(acoordion-label, line-height);
+  font-weight: _fontDef(acoordion-label, font-weight);
+  letter-spacing: _fontDef(acoordion-label, letter-spacing);
+}
+
+@mixin bodyText($contentSize: default) {
+  font-weight: 300;
+  letter-spacing: 0.125rem;
+  line-height: 1.5rem;
+
+  @if $contentSize == "small" {
+  	font-size: 0.925rem;
+  }
+  
+  @if $contentSize == "default" {
+  	font-size: 1.0rem;
+  }
+
+  @if $contentSize == "large" {
+  	font-size: 1.25rem;
+  }
+}
+
+

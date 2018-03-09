@@ -1,0 +1,13 @@
+.desktop-hidden {
+	@include break(md) {
+		visibility: hidden;
+	}	
+}
+
+.mobile-hidden {
+	visibility: hidden;
+
+	@include break(md) {
+		visibility: visible;
+	}	
+}

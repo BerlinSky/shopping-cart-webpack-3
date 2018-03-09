@@ -1,0 +1,67 @@
+.accordion {
+  // border:1px solid #542437;
+  // border-radius:10px;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  // margin: 5px;
+
+  .accordionContent {
+    height: 0px;
+    border-top: 0;
+
+    padding: 0 10px;
+    overflow: hidden;
+    border:1px solid #999; // Make the border match the background so it fades in nicely
+    transition: all .5s ease-out;
+
+    &--bodyText {
+      @include bodyText();
+    }
+
+    &__buttonContainer {
+      // text-transform: uppercase;
+      // background-color: #999999;
+      color: #646464;
+      // text-align: center;
+      // margin-top: 15px;
+    }
+
+    &__button {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: solid 1px #646464;
+    }
+  }
+}
+
+.accordion [type=checkbox] {
+  display:none;
+}
+
+.accordion label {
+  display: block;
+  color: _color(accordion-label, color);
+  background: _color(button-default, bg-color);
+
+  @include accordionLabel();
+  
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 10px;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+.accordion label:hover, .accordion [type=checkbox]:checked ~ label {
+  // color: _color(button-default, hover-color);
+  // background: _color(button-default, bg-color);
+  // text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+}
+
+.accordion [type=checkbox]:checked ~ label ~ .accordionContent {
+  height: auto;
+  padding: 15px;
+
+  // border: 1px solid #333;
+}

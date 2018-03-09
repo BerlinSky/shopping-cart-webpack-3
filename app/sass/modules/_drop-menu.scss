@@ -1,0 +1,163 @@
+.navlinksContainer {
+  text-align: center;
+}
+
+.navLinks--fixed {
+	position: fixed;
+  left: 0.5rem;
+  width: 100%;
+}
+
+.navlinks__dropMenu {
+	width: 150px;
+	height: 65px;
+	line-height: 65px;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 14px;
+	cursor: pointer;
+
+	&:hover {
+	  background: #333;
+	  // border-radius: 5px;
+	}
+}
+
+.dropMenuList {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+
+  &__item {
+    // background: #666;
+    background: #000;
+    color: rgba(255, 255, 255, 0.7);
+
+    &:hover {
+		  // background: #606060;
+		  background: #333;
+		}
+  }
+}
+
+ul.dropMenuList li {
+  display: none;
+}
+
+li:hover > ul.dropMenuList li {
+  display: block;
+}
+  
+.navlinks__dropMenu:hover > .menu__swish {
+	perspective: 1000px;
+
+	li {
+		// opacity: 0;
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}) {
+				animation-name: animated__swish;
+		    animation-duration: 250ms * $i;
+		    animation-timing-function: ease-in-out;
+		    fill-mode: forwards;
+			}
+		}
+	}
+
+	@keyframes animated__swish {
+		0% {
+			opacity: 0;
+			transform: rotateY(-90deg) translateY(30px);
+		}
+    100% {
+			opacity: 1;
+			transform: rotateY(0deg) translateY(0px);
+    }
+	}
+}        
+
+.navlinks__dropMenu:hover > .menu__dropIn {
+	perspective: 1000px;
+	transform-origin: top center;
+
+	li {
+		// opacity: 0;
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}) {
+				animation-name: animated__dropIn;
+		    animation-duration: 250ms * $i;
+		    animation-timing-function: ease-in-out;
+		    fill-mode: forwards;
+			}
+		}
+	}
+
+	@keyframes animated__dropIn {
+		0% {
+			opacity: 0;
+			transform: rotateX(-90deg);
+		}
+    100% {
+			opacity: 1;
+			transform: rotateX(0deg);
+    }
+	}
+} 
+
+.navlinks__dropMenu:hover > .menu__flipIn--left {
+	perspective: 1000px;
+	transform-origin: top right;
+
+	li {
+		// opacity: 0;
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}) {
+				animation-name: animate__flipIn--left;
+		    animation-duration: 250ms * $i;
+		    animation-timing-function: ease-in-out;
+		    fill-mode: forwards;
+			}
+		}
+	}
+
+	@keyframes animate__flipIn--left {
+		0% {
+			opacity: 0;
+			transform: rotate(30deg) translate(-30px);
+		}
+    100% {
+			transform: rotate(0deg) translate(0px);
+			opacity: 1;
+    }
+	}
+} 
+
+.navlinks__dropMenu:hover > .menu__flipIn--right {
+	perspective: 1000px;
+	transform-origin: top right;
+
+	li {
+		// opacity: 0;
+		@for $i from 1 through 6 {
+			&:nth-child(#{$i}) {
+				animation-name: animate__flipIn--right;
+		    animation-duration: 250ms * $i;
+		    animation-timing-function: ease-in-out;
+		    fill-mode: forwards;
+			}
+		}
+	}
+
+	@keyframes animate__flipIn--right {
+		0% {
+			opacity: 0;
+			transform: rotate(-30deg) translate(30px);
+		}
+    100% {
+			transform: rotate(0deg) translate(0px);
+			opacity: 1;
+    }
+	}
+} 
+

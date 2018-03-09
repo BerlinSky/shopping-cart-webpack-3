@@ -1,0 +1,14 @@
+$breakpoints: (
+  xs: 16rem,   // 256px
+  sm: 25.875rem,  // 414px
+  md: 54.875rem, 	// 878px
+  lg: 64rem,   // 1024px - iPad Mini
+  xl: 76.50rem,  // 1224px
+  xx: 95rem		// 1520px
+);
+
+@mixin break($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

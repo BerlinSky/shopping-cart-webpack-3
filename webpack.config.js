@@ -24,10 +24,10 @@ const babelOptions = {
 }
 
 const entryConfig = {
-  vendor: ['jquery'],
+  vendor: ['jquery', 'select2'],
   index: [
-    path.resolve(__dirname, 'app/index.js'),
-    path.resolve(__dirname, 'app/sass/main.scss')
+    path.resolve(__dirname, './app/js/main.js'),
+    path.resolve(__dirname, './app/sass/main.scss')
   ]
 }
 
@@ -181,16 +181,17 @@ module.exports = (env = {}) => {
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
-        template: 'app/index.pug',
+        template: 'app/index.html',
         filename: 'index.html',
         chunk: ['index']
       }),
-      new HtmlWebpackPlugin({
-        favicon: 'app/favicon.png',
-        template: 'app/service.pug',
-        filename: 'service.html',
-        chunk: ['index']
-      }),
+
+      // new HtmlWebpackPlugin({
+      //   favicon: 'app/favicon.png',
+      //   template: 'app/service.pug',
+      //   filename: 'service.html',
+      //   chunk: ['index']
+      // }),
 
       minifyPlugin
     ],

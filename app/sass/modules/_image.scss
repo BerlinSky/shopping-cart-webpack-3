@@ -1,0 +1,36 @@
+.image {
+  display: block;
+  width: 40px;
+  height: auto;
+  margin-top: 0.2em;
+
+  &--tiny {
+    width: 30px;
+  }
+
+  @include break(md) {
+    width: 70px;
+
+    &--tiny {
+      width: 40px;
+    }
+  } 
+
+  // @include respondTo(large) {
+  //   width: 70px;
+
+  //   &--tiny {
+  //     width: 40px;
+  //   }
+  // }  
+
+  // @include respondTo(x-large) {
+  //   width: 70px;
+
+  //   &--tiny {
+  //     width: 40px;
+  //   }
+  // }
+}
+
+

@@ -1,0 +1,104 @@
+//colors
+$color_storm_dust_approx:  		#646464;
+$color_gallery_approx: 				#eee;
+$color_mine_shaft_approx: 		#333;
+$color_mountain_mist_approx: 	#999999;
+$color_puerto_rico_approx: 		#2ebaae;
+$white: 											#ffffff;
+$color_razzmatazz_approx: 		#e91e63;
+
+$color-map: (
+	site-default: (
+		color: 			$color_storm_dust_approx,
+		bg-color: 	$color_gallery_approx,
+		grid-ruler: $color_mountain_mist_approx
+	),
+	button-default: (
+		color: 				$color_mine_shaft_approx,
+		bg-color: 		$color_mountain_mist_approx,
+		hover-color:	$color_puerto_rico_approx
+	),
+	button-sizeSelection: (
+		color: 				#646464,
+		bg-color: 		gold,
+		hover-color:	$color_puerto_rico_approx
+	),
+	button-navigation: (
+		color: 		$white,
+		bg-color: $color_razzmatazz_approx
+	),
+	accordion-label: (
+		color: 		$white,
+		bg-color: $color_mountain_mist_approx
+	),
+	input-default: (
+		color: 		$color_mine_shaft_approx,
+		bg-color: $white
+	),
+	link: (
+		hover-color: $color_puerto_rico_approx
+	)
+);
+
+$font-map: (
+	acoordion-label: (
+		font-size: 1.125rem,
+		line-height: 3rem,
+		font-weight: 400,
+		letter-spacing: .1em
+	)
+);
+
+// Misc.
+$misc: (
+	z-index-base:	10000
+);
+
+// Duration.
+$duration: (
+	menu:				0.5s,
+	transition:	0.2s
+);
+
+// Size.
+$size: (
+	site-min-width:					20rem,
+	element-height:					2.75em,
+	element-margin:					2em,
+	section-spacing:				3em,
+	section-spacing-small:	.5em,
+	menu:										25em
+);
+
+// Font.
+$font: (
+	family:					('Source Sans Pro', Helvetica, sans-serif),
+	site-base: 			16px,
+	weight:					400,
+	weight-heading:	700,
+	weight-bold:		700,
+	line-height:		1.75
+);
+
+$font-size: (
+	site-default: 1.25rem,
+	header-text: 	1.5rem,
+	body-text: 		1.25rem,
+	body-text-sm:	.8rem,
+	footer-text:	.7rem,
+	button-text:	1.4rem
+);
+
+// Palette.
+$palette: (
+  background: 		#f4f4f4,  
+  site-default:		#646464, 
+	bg-alt:					#f4f4f4, 
+	fg:							#646464,
+	fg-bold:				#3c3b3b,
+	fg-light:				#aaaaaa,
+	border:					rgba(160,160,160,0.3),
+	border-bg:			rgba(160,160,160,0.075),
+	border-alt:			rgba(160,160,160,0.65),
+	accent:					#2ebaae
+);

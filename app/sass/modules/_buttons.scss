@@ -1,0 +1,44 @@
+.buttonPanel {
+  margin-right: 10px;
+  text-align: right;
+
+  // @include respondTo(x-small) {
+  //   text-align: center;
+  // }
+
+  // @include respondTo(small) {
+  //   text-align: center;
+  // }
+}
+
+.actionButton {
+  appearance: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+  // box-shadow: inset 0 0 0 2px #eee;
+  // color: #999;
+  cursor: pointer;
+  display: inline-block;
+  // font-size: 12px;
+  // font-weight: 600;
+  height: 3.125em;
+  // letter-spacing: 0.225em;
+  line-height: 3.125em;
+  padding: 0 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include headerText();
+
+  &--short {
+    height: 1.5rem;
+    line-height: 2rem;
+
+  }
+}

@@ -1,0 +1,131 @@
+.cardListPanel {
+	display: flex;
+	justify-content: flex-start;
+	padding: 0;
+
+  &__title {
+  	flex-basis: 100%;
+  }
+
+  &__images {
+  	flex-basis: 100%;
+  	display: flex;
+  	justify-content: flex-start;
+
+  	background-color: #fff;
+	  padding: 11px 5px 11px 5px;
+  }
+}
+
+.cardNumberPanel {
+	// border: 1px solid orange;
+	padding: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	@include break(md) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	// align-items: center;
+	// align-items: flex-start;
+
+	&__cardNumber {
+		flex-basis: 100%;
+
+		@include break(md) {
+			flex-basis: 45%;
+			margin-right: 5px;
+		}
+
+		.inputGroup {
+			width: 100%;
+		}
+	}
+
+	// &__cardImage {
+	// 	flex-basis: 10%;
+
+	// 	.credit {
+	// 		display: none;
+	// 		&--default {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
+}
+
+.expDateAndCVCodePanel {
+	// border: 1px solid crimson;
+	display: flex;
+	justify-content: space-between;
+
+  flex-direction: column;
+	align-items: flex-start;
+
+  &__expDate {
+  	flex-basis: 49%;
+		margin-right: 1%;
+
+		@include break(md) {
+			flex-basis: 25%;
+			margin-right: 5px;
+		}
+  }
+
+  &__cvCode {
+  	flex-basis: 50%;
+
+  	@include break(md) {
+			flex-basis: 25%;
+			margin-right: 0;
+		}
+  }
+}
+
+.cardIcon {
+	position: relative;
+
+	&__amex {
+	  width: 60px;
+	  height: 37px;
+	  padding-right: 10px;
+	}
+
+	&__visa {
+		width: 60px;
+	  height: 37px;
+	  padding-right: 10px;
+	}
+	
+
+	&__mastercard {
+		width: 60px;
+	  height: 37px;
+	  padding-right: 10px;
+	}
+
+	&__discover {
+		width: 60px;
+	  height: 37px;
+	  padding-right: 10px;
+	}
+
+	// .js-cardIcon__mask {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 50px;
+	//   height: 37px;
+	// 	background-color: #666;
+	// 	opacity: .8;
+	// }
+}
+
+.cvvHelp {
+	position: absolute;
+	top: 0;
+	right: 5px;
+}

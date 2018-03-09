@@ -1,0 +1,31 @@
+.footer {
+	padding: 50px 0 40px 0;
+	width: 100%;
+
+	.copyright {
+	  @include bodyText(small);
+		text-transform: uppercase;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+.footerPanel {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	&__links {
+		flex-basis: auto;
+		order: 1;
+		flex-grow: 1;
+	}
+
+	&__item {
+		&--default {
+			text-align: center;
+		}
+	}
+}
+
+

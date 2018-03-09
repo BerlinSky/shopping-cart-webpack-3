@@ -1,0 +1,76 @@
+@import "site-banner";
+@import "navigation";
+@import "main-content";
+@import "footer";
+@import "panel-container";
+@import "image";
+@import "data-form";
+@import "buttons";
+@import "flexbox-table";
+@import "flexbox-grid";
+@import "accordion";
+@import "drop-menu";
+@import "animated-background";
+@import "./shopping-cart/cart";
+@import "./shopping-cart/card";
+@import "./select2/select";
+@import "./select2/select-custom";
+@import "./shopping-cart/use-content";
+
+
+.sentence span {
+	color: #444;
+	white-space: nowrap;
+	font-size: 200%;
+	font-weight: normal;
+}
+
+.words span {
+	position: relative;
+	opacity: 0;
+	animation: animatedWords 5s ease-in-out infinite;
+}
+
+.words span:nth-child(1) {
+	animation-delay: 0s;
+	color: #678a6b;
+}
+
+.words span:nth-child(2) {
+	animation-delay: 3s;
+	color: #bcd292;
+}
+
+.words span:nth-child(3) {
+	animation-delay: 6s;
+	color: #e7d7fc;
+}
+
+.words span:nth-child(4) {
+	animation-delay: 9s;
+	color: #dec1f5;
+}
+
+.words span:nth-child(5) {
+	animation-delay: 12s;
+	color: #8769ac;
+}
+
+.words span:nth-child(6) {
+	animation-delay: 15s;
+	color: #e7d7fc;
+}
+
+@keyframes animatedWords {
+	from {
+		opacity: 1;
+		animation-timing-function: ease-in;
+		top: 0;
+	}
+	to {
+		opacity: 0;
+		top: 5em;
+	}
+}
+
+

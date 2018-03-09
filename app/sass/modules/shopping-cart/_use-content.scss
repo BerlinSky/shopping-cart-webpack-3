@@ -1,0 +1,14 @@
+.userContent {
+  @include bodyText();
+  // padding: 0 15px;
+  margin: 20px;
+
+  @include break(md) {
+    margin: 0;
+  }
+
+  p {
+    margin-top: 15px; 
+    margin-bottom: 15px
+  }
+}

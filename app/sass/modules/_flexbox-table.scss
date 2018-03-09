@@ -1,0 +1,134 @@
+.tableRow {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include break(md) {
+    flex-wrap: nowrap;
+  }
+
+  &__column--6x {
+    // background-color: red;
+    flex-basis: 60%;
+  } 
+
+  &__column--5x {
+    // background-color: red;
+    flex-basis: 50%;
+  } 
+
+  &__column--4x {
+    // background-color: red;
+    flex-basis: 40%;
+  }
+
+  &__column--3x {
+    // background-color: red;
+    flex-basis: 30%;
+  }
+
+  &__column--2x {
+    flex-basis: 20%;
+  } 
+
+  &__column--default {
+    flex-basis: 10%;
+  }
+
+
+  // border: 1px solid blue;
+
+  &__text {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.tableHeader {
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.tableRow {
+  border-bottom: 2px solid #e0e0e0;
+  border-collapse: collapse;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include break(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &--tall {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__text {
+    padding-right: 20px;
+    width: 180px;
+  }
+
+  &__num {
+    width: 80px;
+  }
+}
+
+.tableRow__image--component {
+  padding-left: 0;
+
+  @inclue break(md) {
+    padding-left: 30px;
+  }
+}
+
+.tableRow__headerText {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tableRow__headerNum {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: right;
+}
+
+.tableRow__bodyText {
+  padding: 5px;
+
+  @include bodyText();
+  // line-height: 1.8rem;
+  // font-size: 1.25rem;
+  // font-weight: 400;
+  // margin-bottom: 1rem;
+
+  &--primary {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+.tableRow__bodyNum {
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.tableRow__image {
+  background-color: green;
+  order: 1;
+}
+

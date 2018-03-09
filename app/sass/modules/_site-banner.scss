@@ -1,0 +1,33 @@
+.siteBanner {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
+	width: 100%;
+
+	display: none;
+
+	@include break(md) {
+		display: block;
+	}
+
+	&__intro {
+		@include headerText();
+	  text-transform: uppercase;
+		text-align: center;
+	  margin: 20px 0 30px 0;
+
+	  @include break(md) {
+		  font-size: 2em;
+    }
+	}
+
+	&__info {
+		margin-bottom: 20px;
+	  margin-top: -1em;
+
+	  @include bodyText(small);
+		text-align: center;
+	  text-transform: uppercase;
+	}
+}

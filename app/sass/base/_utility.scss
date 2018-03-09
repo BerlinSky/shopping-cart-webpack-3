@@ -1,0 +1,58 @@
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-bold {
+  font-weight: _font(weight-bold);
+}
+
+// .desktopOnly-flex {
+//   display: none;
+//   @include break(md) {
+//     display: flex;
+//   }
+// }
+
+.desktopOnly--flex {
+  display: none;
+  @include break(md) {
+    display: flex;
+  }
+}
+
+.desktopOnly--text {
+	display: none;
+	@include break(md) {
+		display: inline;
+	}
+}
+
+.desktopOnly--block {
+	display: none;
+	@include break(md) {
+		display: block;
+	}
+}
+
+.mobileOnly--block {
+	display: block;
+	@include break(md) {
+		display: none;
+	}
+}
+
+.mobileOnly--flex {
+  display: flex;
+  @include break(md) {
+	  display: none;
+  }
+}
+

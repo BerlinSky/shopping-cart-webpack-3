@@ -1,0 +1,74 @@
+.media {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #333;
+  padding: 5px 10px 10px 15px;
+
+  &__figure {
+    margin-right: 1em;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__body,
+  &__body:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin: 0;
+  } 
+
+  &__subtitle {
+    margin: 0;
+    font-size: 1.0rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &__description {
+    font-size: 1.0rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &--reverse > &__figure {
+    order: 1;
+    margin: 0 0 0 1em;
+  }
+
+  &__button {
+    appearance: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    height: 3.125em;
+    letter-spacing: 0.225em;
+    line-height: 3.125em;
+    padding: 0 25px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+
+

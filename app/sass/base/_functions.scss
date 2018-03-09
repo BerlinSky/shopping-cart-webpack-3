@@ -1,0 +1,60 @@
+/// Map deep get
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function _color($keys...) {
+	$map: $color-map;
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function _fontDef($keys...) {
+	$map: $font-map;
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+/// Gets a duration value.
+/// @param {string} $key.
+/// @return {string} Value.
+@function _duration($key) {
+	@return map-get($duration, $key);
+}
+
+/// Gets a font value.
+/// @param {string} $key.
+/// @return {string} Value.
+@function _font($key) {
+	@return map-get($font, $key);
+}
+
+/// Gets a font size value.
+/// @param {string} $key.
+/// @return {string} Value.
+@function _fontSize($key) {
+	@return map-get($font-size, $key);
+}
+
+/// Gets a misc value.
+/// @param {string} $key.
+/// @return {string} Value.
+@function _misc($key) {
+	@return map-get($misc, $key);
+}
+
+/// Gets a palette value.
+/// @param {string} $key.
+/// @return {string} Value.
+@function _palette($key) {
+	@return map-get($palette, $key);
+}
+
+/// Gets a size value.
+/// @param {string} $key.
+/// @return {string} Value.
+@function _size($key) {
+	@return map-get($size, $key);
+}

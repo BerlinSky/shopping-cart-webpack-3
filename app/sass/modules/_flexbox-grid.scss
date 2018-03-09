@@ -1,0 +1,113 @@
+// mini-grid system 
+
+$items: 16;
+
+.l-grid {
+  // padding: 0.5rem;
+}
+
+.l-grid--fullWith {
+  flex: 0 0 100%;
+}
+
+// loop over the breakpoints
+@each $key, $value in $breakpoints {
+  @for $i from 1 through $items {
+    .l-grid__span--#{$key}-#{$i} {
+      // flex: 0 0 100%;
+      @include break($key) {
+        // @debug #{$i / $items * 100%}; 
+        flex: 0 0 #{$i / $items * 100%};
+      }
+    }
+
+    .l-grid__skip--#{$key}-#{$i} {
+      @include break($key) {
+	      // @debug #{$i / $items * 100%}; 
+        margin-left: #{$i / $items * 100%};
+      }
+    }
+  }
+}
+
+$columns: 16;
+@for $i from 1 through $columns {
+	.tableColumn__orderDesktop--#{$i} {
+		@include break(md) {
+			order: #{$i};
+		}
+	}
+}
+
+.grid__container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  @include break(md) {
+    padding-bottom: 15px;
+  }
+
+  &--secondary {
+    margin-bottom: 40px;
+  }
+
+  &--ruler {
+    border-bottom: 1px solid _color(site-default, grid-ruler);
+  }
+}
+
+.grid__row {
+  margin-bottom: 1.0rem;
+  @include break(md) {
+  }
+
+  &--paddedSides {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+.columnHeading {
+  &__dataLabel {
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include break(md) {
+      display: block;
+    }
+
+    &--numeric {
+      text-align: right;
+    }
+  }
+}
+
+.dataLabel {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @include break(md) {
+    display: none;
+  }
+}
+
+.dataValue {
+  font-size: 16px;
+  padding-left: 20px;
+
+  @include break(md) {
+    padding-left: 0;
+    font-size: 14px;
+  }
+
+  &--numeric {
+    text-align: left;
+
+    @include break(md) {
+      text-align: right;
+    }
+  }
+}
