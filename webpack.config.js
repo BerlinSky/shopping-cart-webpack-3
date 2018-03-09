@@ -186,14 +186,35 @@ module.exports = (env = {}) => {
         chunk: ['index']
       }),
 
-      // new HtmlWebpackPlugin({
-      //   favicon: 'app/favicon.png',
-      //   template: 'app/service.pug',
-      //   filename: 'service.html',
-      //   chunk: ['index']
-      // }),
+      new HtmlWebpackPlugin({
+        favicon: 'app/favicon.png',
+        template: 'app/payment.html',
+        filename: 'payment.html',
+        chunk: ['index']
+      }),
 
-      minifyPlugin
+      new HtmlWebpackPlugin({
+        favicon: 'app/favicon.png',
+        template: 'app/payment-with-coupon.html',
+        filename: 'payment-with-coupon.html',
+        chunk: ['index']
+      }),
+
+      new HtmlWebpackPlugin({
+        favicon: 'app/favicon.png',
+        template: 'app/address.html',
+        filename: 'address.html',
+        chunk: ['index']
+      }),
+
+      new HtmlWebpackPlugin({
+        favicon: 'app/favicon.png',
+        template: 'app/invoice.html',
+        filename: 'invoice.html',
+        chunk: ['index']
+      }),
+
+      // minifyPlugin
     ],
 
     devServer: {
