@@ -1,6 +1,18 @@
 import $ from 'jquery';
 import Cleave from 'cleave.js';
 // import Select2 from 'select2';
+import Vue from 'vue'
+import VueCustomElement from 'vue-custom-element'
+Vue.use(VueCustomElement)
+
+// import App from './App'
+import HelloWorld from './components/HelloWorld';
+// Vue.use(HelloWorld)
+// Vue.component( 'hello-world', HelloWorld );
+Vue.customElement('hello-world', HelloWorld)
+
+// import Test from './components/Test';
+// Vue.component( 'test', Test );
 
 $(function () {
 

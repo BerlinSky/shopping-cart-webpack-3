@@ -13,20 +13,28 @@
   <!--Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <comment>
+
 
     <!--
       <link rel="stylesheet" href="http://media.fanfire.com/fcShoppingCart/styles/font-awesome.min.css">
       <link rel="stylesheet" href="http://media.fanfire.com/fcShoppingCart/styles/main.css">
     -->
 
-  </comment>
 
 </head>
 
 <body>
 
   <div class="l-siteContainer">
+
+    <hello-world>
+    </hello-world>
+
+    <div id="app">
+      <label for="name">Name:</label>
+      <input id="name" type="text" v-model.lazy="name" />
+      <p>{{ name }}</p>
+    </div>
 
   <!-- Header Section to be replaced by the dynamic content -->
     <section class="siteBanner">

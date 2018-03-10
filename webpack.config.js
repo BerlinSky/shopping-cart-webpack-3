@@ -24,7 +24,7 @@ const babelOptions = {
 }
 
 const entryConfig = {
-  vendor: ['jquery', 'select2'],
+  vendor: ['jquery', 'vue', 'select2'],
   index: [
     path.resolve(__dirname, './app/js/main.js'),
     path.resolve(__dirname, './app/sass/main.scss')
@@ -34,6 +34,16 @@ const entryConfig = {
 const outputConfig = {
   path: path.resolve(__dirname, 'dist'),
   filename: 'bundle.[name].[chunkhash].js'
+}
+
+const vueRules = {
+  test: /\.vue$/,
+  exclude: /node_modules/,
+  use: [
+    {
+      loader: 'vue-loader'
+    }
+  ]
 }
 
 const jsRules = {
@@ -162,11 +172,14 @@ module.exports = (env = {}) => {
     })(),
 
     module: {
-      rules: [ tsRules, jsRules, sassRules, htmlRules, pugRules, fontRules, imageRules ]
+      rules: [ vueRules, jsRules, sassRules, htmlRules, pugRules, fontRules, imageRules ]
     },
 
     resolve: {
-      extensions: [".tsx", ".ts", ".js"]
+      extensions: [".tsx", ".ts", ".js", '.vue', '.json'],
+      alias: {
+        '@': path.resolve( __dirname, '..' )
+      }
     },
 
     plugins: [

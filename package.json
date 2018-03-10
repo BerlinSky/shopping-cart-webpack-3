@@ -38,11 +38,15 @@
     "tslint": "5.4.3",
     "tslint-loader": "3.5.3",
     "typescript": "2.3.4",
+    "vue-custom-element": "2.1.0",
+    "vue-loader": "14.2.1",
+    "vue-template-compiler": "2.5.14",
     "webpack": "^3.11.0",
     "webpack-dev-server": "2.11.1"
   },
   "dependencies": {
     "cleave.js": "1.1.2",
-    "select2": "4.0.6-rc.1"
+    "select2": "4.0.6-rc.1",
+    "vue": "2.5.14"
   }
 }
