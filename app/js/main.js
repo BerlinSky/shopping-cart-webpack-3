@@ -1,13 +1,17 @@
 import $ from 'jquery';
 import Cleave from 'cleave.js';
-// import Select2 from 'select2';
 import Vue from 'vue'
+
+// import Select2 from 'select2';
 
 import VueCustomElement from 'vue-custom-element'
 Vue.use(VueCustomElement)
 
 import CartSubmitButton from './components/CartSubmitButton';
 Vue.customElement('cart-submit-button', CartSubmitButton)
+
+import ApplyCoupon from './components/ApplyCoupon';
+Vue.customElement('apply-coupon', ApplyCoupon)
 
 $(function () {
 
