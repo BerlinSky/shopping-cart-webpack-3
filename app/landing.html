@@ -13,28 +13,11 @@
   <!--Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-
-
-    <!--
-      <link rel="stylesheet" href="http://media.fanfire.com/fcShoppingCart/styles/font-awesome.min.css">
-      <link rel="stylesheet" href="http://media.fanfire.com/fcShoppingCart/styles/main.css">
-    -->
-
-
 </head>
 
 <body>
 
   <div class="l-siteContainer">
-
-    <hello-world>
-    </hello-world>
-
-    <div id="app">
-      <label for="name">Name:</label>
-      <input id="name" type="text" v-model.lazy="name" />
-      <p>{{ name }}</p>
-    </div>
 
   <!-- Header Section to be replaced by the dynamic content -->
     <section class="siteBanner">
@@ -43,7 +26,6 @@
         <div class="siteBanner__info">Site Banner Place Holder</div>
       </div>
     </section>
-  <!-- End: Header Section -->
 
     <div class="l-grid__container l-membershipPackage membershipTotal">
       <div class="l-membershipPackage__total cartTotal cartTotal--primay">
@@ -52,10 +34,8 @@
       </div>
     </div>
 
-    <form class="l-grid__container cart___buttonContainer js-dataForm" method="post" action="payment.html">
-      <input type="hidden" name="sizeSelection" value="" class="js-sizeSelectionHidden">
-      <button type="submit" class="l-cartActionBlock cartActionBlock actionButton cart___navButton">Go to payment</button>
-    </form>
+    <cart-submit-button>
+    </cart-submit-button>
 
     <div class="l-grid__container">
       <div class="l-cartActionBlock cartActionBlock">
@@ -216,10 +196,8 @@
           </div>
         </div>
 
-        <form class="l-grid__container cart___buttonContainer js-dataForm" method="post" action="payment.html">
-          <input type="hidden" name="sizeSelection" value="" class="js-sizeSelectionHidden">
-          <button type="submit" class="l-cartActionBlock cartActionBlock actionButton cart___navButton">Go to payment</button>
-        </form>
+        <cart-submit-button>
+        </cart-submit-button>
 
       </div>
     </section>
