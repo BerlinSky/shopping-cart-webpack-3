@@ -13,6 +13,12 @@ Vue.customElement('cart-submit-button', CartSubmitButton)
 import ApplyCoupon from './components/ApplyCoupon';
 Vue.customElement('apply-coupon', ApplyCoupon)
 
+import SiteBanner from './components/SiteBanner';
+Vue.customElement('site-banner', SiteBanner)
+
+import SiteFooter from './components/SiteFooter';
+Vue.customElement('site-footer', SiteFooter)
+
 $(function () {
 
 	$('.js-couponCodeInput').hide();
