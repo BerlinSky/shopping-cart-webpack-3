@@ -19,6 +19,9 @@ Vue.customElement('site-banner', SiteBanner)
 import SiteFooter from './components/SiteFooter';
 Vue.customElement('site-footer', SiteFooter)
 
+import CartTotal from './components/CartTotal';
+Vue.customElement('cart-total', CartTotal)
+
 $(function () {
 
 	$('.js-couponCodeInput').hide();
