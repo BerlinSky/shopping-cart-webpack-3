@@ -164,10 +164,14 @@ module.exports = (env = {}) => {
     debug: (isProduction) ? false : true
   })
 
+  const environmentSetting = (isProduction) ? '"production"' : null;
+
   const runBabiliPlugin = () => {
     // return (isProduction) ? 'hidden-source-map' : 'cheap-module-eval-source-map'
     return (isProduction) ? new BabiliPlugin() : null;
   }
+
+  const test = '"production"';
 
   return {
     entry: entryConfig,
@@ -177,8 +181,6 @@ module.exports = (env = {}) => {
       // return (isProduction) ? 'hidden-source-map' : 'cheap-module-eval-source-map'
       return (isProduction) ? '' : 'cheap-module-eval-source-map'
     })(),
-
-
 
     module: {
       rules: [ vueRules, jsRules, sassRules, htmlRules, pugRules, fontRules, imageRules ]
@@ -192,11 +194,13 @@ module.exports = (env = {}) => {
     },
 
     plugins: [
-      // new webpack.DefinePlugin({
-      //   "process.env": { NODE_ENV: "'production'" }
-      // }),
-      // new BabiliPlugin(),
-      // runBabiliPlugin,
+      new webpack.DefinePlugin({
+        "process.env": {
+          NODE_ENV: environmentSetting
+        }
+      }),
+      // environmentSetting,
+      runBabiliPlugin,
 
       extractPlugin,
       providerPlugin,
