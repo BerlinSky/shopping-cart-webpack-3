@@ -15,7 +15,7 @@ $cart-section-ratio-map: (
     lg: 0.6,
     xl: 0.6,
     xx: 0.6
-  ), 
+  ),
   right: (
     xs: 1,
     sm: 1,
@@ -84,7 +84,7 @@ $cart-section-ratio-map: (
 
   &--vertical {
     flex-direction: column;
-  } 
+  }
 
   &--center {
     align-items: center;
@@ -124,7 +124,7 @@ $cart-section-ratio-map: (
   }
 }
 
-.l-membershipPackage {  
+.l-membershipPackage {
   &__total {
     flex-basis: 100%;
   }
@@ -181,5 +181,21 @@ $cart-section-ratio-map: (
   @include break(md) {
     flex-basis: calc(6 / 16 * 100%);
     margin-left: calc(10/ 16 * 100%);
+  }
+}
+
+.l-contentSection--mobile {
+  display: inherit;
+
+  @include break(md) {
+    display: none;
+  }
+}
+
+.l-contentSection--desktop {
+  display: none;
+
+  @include break(md) {
+    display: inherit;
   }
 }

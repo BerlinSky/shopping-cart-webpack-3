@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BabiliPlugin = require("babili-webpack-plugin");
 
 const extractPlugin = new ExtractTextPlugin({
   filename: 'main.[chunkhash].css'
@@ -163,13 +164,21 @@ module.exports = (env = {}) => {
     debug: (isProduction) ? false : true
   })
 
+  const runBabiliPlugin = () => {
+    // return (isProduction) ? 'hidden-source-map' : 'cheap-module-eval-source-map'
+    return (isProduction) ? new BabiliPlugin() : null;
+  }
+
   return {
     entry: entryConfig,
     output: outputConfig,
 
     devtool: (() => {
-      return (isProduction) ? 'hidden-source-map' : 'cheap-module-eval-source-map'
+      // return (isProduction) ? 'hidden-source-map' : 'cheap-module-eval-source-map'
+      return (isProduction) ? '' : 'cheap-module-eval-source-map'
     })(),
+
+
 
     module: {
       rules: [ vueRules, jsRules, sassRules, htmlRules, pugRules, fontRules, imageRules ]
@@ -183,6 +192,12 @@ module.exports = (env = {}) => {
     },
 
     plugins: [
+      // new webpack.DefinePlugin({
+      //   "process.env": { NODE_ENV: "'production'" }
+      // }),
+      // new BabiliPlugin(),
+      // runBabiliPlugin,
+
       extractPlugin,
       providerPlugin,
       cleanWebPackPlugin,
