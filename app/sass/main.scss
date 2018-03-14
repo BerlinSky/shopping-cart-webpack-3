@@ -6,3 +6,19 @@
 @import "state/all-states";
 
 
+.membershipComponentBlock {
+  // background: tomato;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__itemText--left {
+  text-align: left;
+}
+
+.sizeBlock--smallRectangle {
+  min-width: 3.8rem;
+}
