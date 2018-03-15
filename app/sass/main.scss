@@ -22,3 +22,18 @@
 .sizeBlock--smallRectangle {
   min-width: 3.8rem;
 }
+
+.actionButtonLinkBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actionButtonLink {
+  text-align: center;
+  color: #3aa6ca;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+

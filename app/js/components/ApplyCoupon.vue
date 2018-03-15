@@ -11,7 +11,9 @@
           <input class="dataInput" type="text">
           <label>Coupon Code</label>
         </div>
-        <a class="actionButton cart___couponCodeButton js-couponCodeButton">Coupon Code</a>
+        <div class="actionButtonLinkBlock">
+          <a class="actionButtonLink js-couponCodeButton">Coupon Code</a>
+        </div>
         <button type="submit" class="actionButton cart___couponCodeButton js-couponCodeInput">Apply Coupon</button>
       </form>
     </div>
