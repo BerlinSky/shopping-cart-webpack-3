@@ -213,17 +213,24 @@ module.exports = (env = {}) => {
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
-        template: 'app/landing.html',
+        template: 'app/index.html',
         filename: 'index.html',
         chunk: ['index']
       }),
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
-        template: 'app/index.html',
-        filename: 'index-desktop.html',
+        template: 'app/landing.html',
+        filename: 'landing.html',
         chunk: ['index']
       }),
+
+      // new HtmlWebpackPlugin({
+      //   favicon: 'app/favicon.png',
+      //   template: 'app/index.html',
+      //   filename: 'index-desktop.html',
+      //   chunk: ['index']
+      // }),
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',

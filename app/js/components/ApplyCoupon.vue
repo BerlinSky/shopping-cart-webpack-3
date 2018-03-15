@@ -14,6 +14,7 @@
         <div class="actionButtonLinkBlock">
           <a class="actionButtonLink js-couponCodeButton">Coupon Code</a>
         </div>
+
         <button type="submit" class="actionButton cart___couponCodeButton js-couponCodeInput">Apply Coupon</button>
       </form>
     </div>
