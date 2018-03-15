@@ -13,7 +13,6 @@
   <!--Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <link rel="stylesheet" href="http://media.fanfire.com/fcShoppingCart/styles/font-awesome.min.css">
   <link rel="stylesheet" href="http://media.fanfire.com/fcShoppingCart/styles/main.css">
 </head>
 
@@ -41,7 +40,7 @@
         <div class="l-grid__container grid__container--ruler l-cartHeading">
           <div class="l-cartHeading__item stepTitle stepTitle--textCenter mobileOnly--block">My Store</div>
           <div class="l-cartHeading__item stepTitle stepTitle--textCenter-x">Payment Information</div>
-        </div> 
+        </div>
 
         <div class="l-grid__container">
           <div class="l-grid__span--xs-16 tableRow__bodyText-x cartTotal cartTotal--secondary">
@@ -53,17 +52,17 @@
           <!-- <div><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" alt="PayPal" /></div> -->
 
           <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-          
+
           <div id="paypal-button-container"></div>
-          
+
           <script>
-          
+
               // Render the PayPal button
               paypal.Button.render({
-          
+
                   // Set your environment
                   env: 'sandbox', // sandbox | production
-          
+
                   // Specify the style of the button
                   style: {
                       label: 'checkout',
@@ -72,15 +71,15 @@
                       color: 'blue',      // gold | blue | silver | black
                       tagline:  false
                   },
-          
+
                   // PayPal Client IDs - replace with your own
                   // Create a PayPal app: https://developer.paypal.com/developer/applications/create
-          
+
                   client: {
                       sandbox:    'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
                       production: '<insert production client id>'
                   },
-          
+
                   payment: function(data, actions) {
                       return actions.payment.create({
                           payment: {
@@ -92,17 +91,17 @@
                           }
                       });
                   },
-          
+
                   onAuthorize: function(data, actions) {
                       return actions.payment.execute().then(function() {
                           window.alert('Payment Complete!');
                       });
                   }
-          
+
               }, '#paypal-button-container');
-          
+
           </script>
-              
+
           <div class="l-grid__span--xs-16 grid__row cvvInstructionsContainer">
             <form method="post" action="invoice.html" class="cardFormContainer dataForm js-paymentForm">
               <div class="dataForm__section">
@@ -124,7 +123,7 @@
                    <img class="cardIcon__discover js-credit--discover-mask" src="http://media.fanfire.com/fcShoppingCart/images/cards/discover2-grey.png" />
                  </div>
                </div>
-               
+
                <div class="cardNumberPanel">
                  <div class="cardNumberPanel__cardNumber">
                    <div class="inputGroup">
@@ -159,10 +158,10 @@
               <a class="actionButton cart___couponCodeButton js-couponCodeButton-lead">Coupon Code</a>
             </form>
           </div>
-        </div> 
+        </div>
 
         <div class="l-grid__container cart___buttonContainer">
-          <button class="l-grid__span--xs-16 grid__row actionButton cart___navButton js-btnPlaceOrder">Place Order</button> 
+          <button class="l-grid__span--xs-16 grid__row actionButton cart___navButton js-btnPlaceOrder">Place Order</button>
         </div>
 
         <div class="l-grid__container">
@@ -234,15 +233,15 @@
                 <span class="mobileOnly">XS</span>
               </div>
 
-            </div> 
+            </div>
             <div class="miniCart__tableRow">
               <div class="miniCart__Column miniCart__Column--subItem">Winter 2016 West Coast Book Tour (LAC2016)</div>
 
               <div class="miniCart__Column mobileOnly-x">
                 <span class="mobileOnly">L</span>
               </div>
-           
-            </div> 
+
+            </div>
             <div class="miniCart__tableRow">
               <div class="miniCart__Column miniCart__Column--subItem">Winter 2016 West Coast Book Tour (LAC2016)</div>
 
@@ -264,7 +263,7 @@
                   <button class="actionButton cart___couponCodeButton js-couponCodeInput">Apply Coupon</button>
                 </form>
               </div>
-            </div> 
+            </div>
 
           </div>
         </div>
@@ -273,23 +272,22 @@
     </section>
 
      <footer class="l-footer footer">
-    
+
       <div class="footerPanel footerPanel__links">
         <div class="footerPanel__item footerPanel__item--default copyright"><a href="">Help</a></div>
         <div class="footerPanel__item footerPanel__item--default copyright"><a href="">Newsletter</a></div>
         <div class="footerPanel__item footerPanel__item--default copyright"><a href="">Terms of Use</a></div>
         <div class="footerPanel__item footerPanel__item--default copyright"><a href="">Privacy Policy</a></div>
-      </div>  
+      </div>
       <div class="footerPanel footerPanel__links">
         <div class="footerPanel__item footerPanel__item--default copyright">Copyright ©2016 The Fine Arist</div>
-      </div> 
+      </div>
 
     </footer>
 
   </div>
 
   <!-- <script src="scripts/bundle.js"></script> -->
-  <script src="http://media.fanfire.com/fcShoppingCart/scripts/bundle.js"></script>
 
 </body>
 
