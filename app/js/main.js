@@ -1,8 +1,10 @@
 import $ from 'jquery';
 import Cleave from 'cleave.js';
-import Vue from 'vue'
-
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 // import Select2 from 'select2';
+
+Vue.use(VueRouter)
 
 import VueCustomElement from 'vue-custom-element'
 Vue.use(VueCustomElement)
@@ -21,6 +23,24 @@ Vue.customElement('site-footer', SiteFooter)
 
 import CartTotal from './components/CartTotal';
 Vue.customElement('cart-total', CartTotal)
+
+import Foo from './components/foo';
+import Bar from './components/bar';
+
+const routes = [
+  { path: '/foo', component: Foo },
+  { path: '/bar', component: Bar }
+]
+
+const router = new VueRouter({
+  routes // short for `routes: routes`
+})
+
+const app = new Vue({  // eslint-disable-line no-unused-vars
+  router
+}).$mount('#app')
+
+
 
 $(function () {
 

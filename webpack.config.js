@@ -25,7 +25,7 @@ const babelOptions = {
 }
 
 const entryConfig = {
-  vendor: ['jquery', 'vue', 'select2'],
+  vendor: ['jquery', 'vue', 'vue-router', 'select2'],
   index: [
     path.resolve(__dirname, './app/js/main.js'),
     path.resolve(__dirname, './app/sass/main.scss')
@@ -189,6 +189,7 @@ module.exports = (env = {}) => {
     resolve: {
       extensions: [".tsx", ".ts", ".js", '.vue', '.json'],
       alias: {
+        vue: 'vue/dist/vue.js',
         '@': path.resolve( __dirname, '..' )
       }
     },

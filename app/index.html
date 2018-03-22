@@ -17,7 +17,12 @@
 
 <body>
 
-  <div class="l-siteContainer">
+  <div id="app" class="l-siteContainer">
+
+      <router-link to="/foo">Go to Foo</router-link>
+      <router-link to="/bar">Go to Bar</router-link>
+
+      <router-view></router-view>
 
       <!-- Header Section to be replaced by the dynamic content -->
       <site-banner>
