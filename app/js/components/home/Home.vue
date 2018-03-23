@@ -1,6 +1,6 @@
 <template>
   <div>
-      <section class="l-grid__container l-contentSection--mobile">
+    <section class="l-grid__container l-contentSection--mobile">
       <div class="l-cartGrid l-cartGrid__default mainContent">
         <div class="l-grid__container grid__container--ruler l-cartHeading">
           <div class="l-cartHeading__item stepTitle"></div>
