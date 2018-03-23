@@ -6,6 +6,17 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
+const routes = [
+  { path: '/', component: Home },
+  { path: '/payment', component: Payment },
+  { path: '/foo', component: Foo },
+  { path: '/bar', component: Bar }
+]
+
+const router = new VueRouter({
+  routes // short for `routes: routes`
+})
+
 import VueCustomElement from 'vue-custom-element'
 Vue.use(VueCustomElement)
 
@@ -24,17 +35,12 @@ Vue.customElement('site-footer', SiteFooter)
 import CartTotal from './components/CartTotal';
 Vue.customElement('cart-total', CartTotal)
 
+import Home from './components/home/Home';
+import Payment from './components/payment/Payment';
+
 import Foo from './components/foo';
 import Bar from './components/bar';
 
-const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
-]
-
-const router = new VueRouter({
-  routes // short for `routes: routes`
-})
 
 const app = new Vue({  // eslint-disable-line no-unused-vars
   router
