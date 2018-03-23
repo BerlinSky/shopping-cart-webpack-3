@@ -16,7 +16,6 @@ export default {
   methods: {
     onSubmit: function () {
       this.$emit('navigateToPayment');
-      alert('inside submit')
     }
   },
 }
