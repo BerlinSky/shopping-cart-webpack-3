@@ -157,10 +157,7 @@
           </form>
         </div>
 
-        <cart-submit-button>
-        </cart-submit-button>
-
-      <button type="button" v-on:click="onSubmit" class="l-cartActionBlock cartActionBlock actionButton cart___navButton">{{ caption }}</button>
+        <cart-submit-button v-on:navigateToPayment="payment"></cart-submit-button>
 
       </div>
     </section>
@@ -178,7 +175,7 @@ export default {
     }
   },
   methods: {
-    onSubmit: function() {
+    payment: function() {
         // Do some stuff here
       this.$router.push('/payment');
     }
