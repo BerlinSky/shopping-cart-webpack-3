@@ -101,7 +101,8 @@
                 <div class="accordionContent--bodyText">CA 94666</div>
                 <div class="accordionContent--bodyText">United States</div>
                 <div class="accordionContent__buttonContainer">
-                  <a class="accordionContent__button" href="address.html">Edit</a>
+                  <!-- <a class="accordionContent__button" href="address.html">Edit</a> -->
+                  <a class="accordionContent__button" v-on:click="address">Edit</a>
                 </div>
               </div>
             </div>
@@ -126,7 +127,7 @@
                 <div class="accordionContent--bodyText">BC V6E 2M6</div>
                 <div class="accordionContent--bodyText">Canada</div>
                 <div class="accordionContent__buttonContainer">
-                  <a class="accordionContent__button" href="address.html">Edit</a>
+                  <a class="accordionContent__button" v-on:click="address">Edit</a>
                 </div>
               </div>
             </div>
@@ -197,10 +198,15 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Payment',
   data () {
     return {
       name: ''
+    }
+  },
+  methods: {
+    address: function() {
+      this.$router.push('/address');
     }
   }
 }

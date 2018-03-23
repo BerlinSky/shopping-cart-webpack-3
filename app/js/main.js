@@ -9,6 +9,7 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/', component: Home },
   { path: '/payment', component: Payment },
+  { path: '/address', component: Address },
   { path: '/foo', component: Foo },
   { path: '/bar', component: Bar }
 ]
@@ -37,6 +38,7 @@ Vue.customElement('cart-total', CartTotal)
 
 import Home from './components/home/Home';
 import Payment from './components/payment/Payment';
+import Address from './components/address/Address';
 
 import Foo from './components/foo';
 import Bar from './components/bar';
