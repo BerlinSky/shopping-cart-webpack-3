@@ -424,7 +424,8 @@
         </div>
 
         <div class="l-grid__container cart___buttonContainer">
-          <button type="submit" class="l-grid__span--xs-16 l-grid__span--md-6-x grid__row actionButton cart___navButton">Submit</button>
+          <!-- <button type="submit" class="l-grid__span--xs-16 l-grid__span--md-6-x grid__row actionButton cart___navButton">Submit</button> -->
+          <button type="button" v-on:click="invoice" class="l-grid__span--xs-16 l-grid__span--md-6-x grid__row actionButton cart___navButton">Submit</button>
         </div>
 
         <div class="l-grid__container cart___buttonContainer">
@@ -493,7 +494,10 @@ export default {
   methods: {
     payment: function() {
       this.$router.push('/payment');
-    }
+    },
+    invoice: function() {
+      this.$router.push('/invoice');
+    },
   }
 }
 </script>

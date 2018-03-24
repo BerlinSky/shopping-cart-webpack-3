@@ -10,8 +10,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/payment', component: Payment },
   { path: '/address', component: Address },
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
+  { path: '/invoice', component: Invoice },
 ]
 
 const router = new VueRouter({
@@ -39,16 +38,12 @@ Vue.customElement('cart-total', CartTotal)
 import Home from './components/home/Home';
 import Payment from './components/payment/Payment';
 import Address from './components/address/Address';
-
-import Foo from './components/foo';
-import Bar from './components/bar';
+import Invoice from './components/invoice/Invoice';
 
 
 const app = new Vue({  // eslint-disable-line no-unused-vars
   router
 }).$mount('#app')
-
-
 
 $(function () {
 
