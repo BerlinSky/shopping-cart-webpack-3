@@ -428,7 +428,7 @@
         </div>
 
         <div class="l-grid__container cart___buttonContainer">
-          <a class="l-grid__span--xs-16 l-grid__span--md-6-x grid__row actionButton cart___navButton cart___navButton--cancel" href="payment.html">Cancel</a>
+          <a v-on:click="payment" class="l-grid__span--xs-16 l-grid__span--md-6-x grid__row actionButton cart___navButton cart___navButton--cancel">Cancel</a>
         </div>
 
       </form>
@@ -488,6 +488,11 @@ export default {
   data () {
     return {
       name: ''
+    }
+  },
+  methods: {
+    payment: function() {
+      this.$router.push('/payment');
     }
   }
 }
