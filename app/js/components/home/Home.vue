@@ -11,8 +11,7 @@
         <cart-total label="TOTAL" amount="US$ 85.00">
         </cart-total>
 
-        <cart-submit-button>
-        </cart-submit-button>
+        <cart-submit-button v-on:navigateToPayment="payment"></cart-submit-button>
 
         <apply-coupon>
         </apply-coupon>
@@ -57,9 +56,9 @@
           </div>
 
           <div class="l-cartActionBlock cartActionBlock">
-            <form class="dataForm js-dataForm" method="post" action="payment.html">
+            <form class="dataForm js-dataForm">
               <div class="actionButtonLinkBlock">
-                  <a class="actionButtonLink js-couponCodeButton" href="/landing.html">Edit Cart</a>
+                <a v-on:click="payment" class="actionButtonLink js-couponCodeButton">Edit Cart</a>
               </div>
             </form>
           </div>
