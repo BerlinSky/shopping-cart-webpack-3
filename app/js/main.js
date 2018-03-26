@@ -43,7 +43,7 @@ import Invoice from './components/invoice/Invoice';
 
 const app = new Vue({  // eslint-disable-line no-unused-vars
   router
-}).$mount('#app')
+}).$mount('#fanclubApp')
 
 $(function () {
 
