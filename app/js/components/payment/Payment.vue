@@ -27,7 +27,7 @@
               <div class="dataForm__section">
                 <div class="cardListPanel">
                  <div class="cardIcon">
-                   <img class="cardIcon__amex js-credit--amex" src="http://media.fanfire.com/fcShoppingCart/images/cards/amex2.png" />
+                   <img v-bind:class="{ cardIconmageHidden: active }" class="cardIcon__amex js-credit--amex" src="http://media.fanfire.com/fcShoppingCart/images/cards/amex2.png" />
                    <img class="cardIcon__amex js-credit--amex-mask" src="http://media.fanfire.com/fcShoppingCart/images/cards/amex2-grey.png" />
                  </div>
                  <div class="cardIcon">
@@ -201,7 +201,8 @@ export default {
   name: 'Payment',
   data () {
     return {
-      name: ''
+      name: '',
+      active: true
     }
   },
   methods: {

@@ -2,17 +2,9 @@ import $ from 'jquery';
 import Cleave from 'cleave.js';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-// import Select2 from 'select2';
+import routes from './components/Routes';
 
 Vue.use(VueRouter)
-
-const routes = [
-  { path: '/', component: Home },
-  { path: '/payment', component: Payment },
-  { path: '/address', component: Address },
-  { path: '/invoice', component: Invoice },
-]
-
 const router = new VueRouter({
   routes // short for `routes: routes`
 })
@@ -34,12 +26,6 @@ Vue.customElement('site-footer', SiteFooter)
 
 import CartTotal from './components/CartTotal';
 Vue.customElement('cart-total', CartTotal)
-
-import Home from './components/home/Home';
-import Payment from './components/payment/Payment';
-import Address from './components/address/Address';
-import Invoice from './components/invoice/Invoice';
-
 
 const app = new Vue({  // eslint-disable-line no-unused-vars
   router
