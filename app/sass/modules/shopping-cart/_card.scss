@@ -1,3 +1,7 @@
+.cardFormContainer {
+	position: relative;
+}
+
 .cardListPanel {
 	display: flex;
 	justify-content: flex-start;
@@ -128,4 +132,9 @@
 	position: absolute;
 	top: 0;
 	right: 5px;
+
+	a :hover {
+		cursor: pointer;
+	}
 }
+

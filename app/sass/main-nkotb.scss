@@ -1,0 +1,77 @@
+@import "theme/all-base-themes";
+@import "theme-stores/theme-nkotb";
+@import "base/all-base";
+@import "layout/all-layouts";
+@import "modules/all-modules";  
+@import "state/all-states";  
+
+body, html {
+  // font-family: 'latoregular', Helvetica, Arial, sans-serif !important;
+  // font-family: Josefin Sans,Arial,Helvetica,Helvetica Neue,sans-serif !important;
+}
+
+.sizeBlock {
+  border: 1px solid #000;
+  font-size: 1.125rem;
+}
+
+.sizeBlock--chosen { 
+  color: #fff;
+  background-color: #000;
+}
+
+
+.cart___navButton {
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #000;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.dataForm .dataInput {
+  border: 1px solid #999;
+  border-radius: 0;
+}
+
+.cartInputError__text {
+  color: #ce4218;
+  font-size: 0.925rem;
+  font-weight: 100;
+  line-height: 1.25;
+}
+
+.dataForm .dropdownPanel {
+  border: 1px solid #999;
+  border-radius: 0;
+}
+
+.cart___navButton.cart___navButton--cancel {
+  background-color: #646464;
+}
+
+.footer .copyright {
+	font-size: .825rem;
+  font-weight: 300;
+  color: #4E4E4E;
+}
+
+// .stepTitle {
+// 	color: #fac43d;
+// 	font-weight: 300;
+// }
+
+// .cartTotal { 
+// 	color: #fac43d;
+// }
+
+.accordion label {
+  // background-color: #fac43d;
+  // color: #000;
+  background-color: #646464;
+  color: #fff;
+}
+
+// .accordion .accordionContent { 
+// 	border: none;
+// }
