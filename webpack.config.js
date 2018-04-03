@@ -221,24 +221,24 @@ module.exports = (env = {}) => {
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
+        template: 'app/mobile-landing.html',
+        filename: 'mobile-landing.html',
+        chunk: ['index']
+      }),
+
+      new HtmlWebpackPlugin({
+        favicon: 'app/favicon.png',
         template: 'app/landing.html',
         filename: 'landing.html',
         chunk: ['index']
       }),
 
-      // new HtmlWebpackPlugin({
-      //   favicon: 'app/favicon.png',
-      //   template: 'app/index.html',
-      //   filename: 'index-desktop.html',
-      //   chunk: ['index']
-      // }),
-
-      // new HtmlWebpackPlugin({
-      //   favicon: 'app/favicon.png',
-      //   template: 'app/payment.html',
-      //   filename: 'payment.html',
-      //   chunk: ['index']
-      // }),
+      new HtmlWebpackPlugin({
+        favicon: 'app/favicon.png',
+        template: 'app/payment.html',
+        filename: 'payment.html',
+        chunk: ['index']
+      }),
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
@@ -247,19 +247,19 @@ module.exports = (env = {}) => {
         chunk: ['index']
       }),
 
-      // new HtmlWebpackPlugin({
-      //   favicon: 'app/favicon.png',
-      //   template: 'app/address.html',
-      //   filename: 'address.html',
-      //   chunk: ['index']
-      // }),
+      new HtmlWebpackPlugin({
+        favicon: 'app/favicon.png',
+        template: 'app/address.html',
+        filename: 'address.html',
+        chunk: ['index']
+      }),
 
-      // new HtmlWebpackPlugin({
-      //   favicon: 'app/favicon.png',
-      //   template: 'app/invoice.html',
-      //   filename: 'invoice.html',
-      //   chunk: ['index']
-      // }),
+      new HtmlWebpackPlugin({
+        favicon: 'app/favicon.png',
+        template: 'app/invoice.html',
+        filename: 'invoice.html',
+        chunk: ['index']
+      }),
 
       // minifyPlugin
     ],
