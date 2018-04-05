@@ -25,7 +25,7 @@ const babelOptions = {
 }
 
 const entryConfig = {
-  vendor: ['jquery', 'vue', 'vue-router', 'select2'],
+  vendor: ['jquery', 'select2'],
   index: [
     path.resolve(__dirname, './app/js/main.js'),
     path.resolve(__dirname, './app/sass/main.scss')
@@ -214,7 +214,8 @@ module.exports = (env = {}) => {
 
       new HtmlWebpackPlugin({
         favicon: 'app/favicon.png',
-        template: 'app/index.html',
+        // template: 'app/index.html',
+        template: 'app/mobile-landing.html',
         filename: 'index.html',
         chunk: ['index']
       }),
