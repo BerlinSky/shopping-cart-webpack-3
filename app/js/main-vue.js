@@ -1,52 +1,37 @@
-// eslint-disable-line no-unused-vars
-
 import $ from 'jquery';
 import Cleave from 'cleave.js';
-// import Select2 from 'select2';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import routes from './components/Routes';
+
+Vue.use(VueRouter)
+const router = new VueRouter({
+  routes // short for `routes: routes`
+})
+
+import VueCustomElement from 'vue-custom-element'
+Vue.use(VueCustomElement)
+
+import CartSubmitButton from './components/CartSubmitButton';
+Vue.customElement('cart-submit-button', CartSubmitButton)
+
+import ApplyCoupon from './components/ApplyCoupon';
+Vue.customElement('apply-coupon', ApplyCoupon)
+
+import SiteBanner from './components/SiteBanner';
+Vue.customElement('site-banner', SiteBanner)
+
+import SiteFooter from './components/SiteFooter';
+Vue.customElement('site-footer', SiteFooter)
+
+import CartTotal from './components/CartTotal';
+Vue.customElement('cart-total', CartTotal)
+
+const app = new Vue({  // eslint-disable-line no-unused-vars
+  router
+}).$mount('#fanclubApp')
 
 $(function () {
-
-	// Place order - submit form
-	const btnPlaceOrder = $('.js-btnPlaceOrder');
-	if (btnPlaceOrder.length > 0) {
-		btnPlaceOrder.click(function( ) {
-			console.log('btnPlaceOrder clicked');
-			$('.js-paymentForm').submit();
-
-		});
-	}
-	// End: Place order - submit form
-
-
-	// Size selection
-	const sizePicker = $('.js-sizeSelection');
-
-	sizePicker.click(function( ) {
-		const markerClass = 'sizeBlock--chosen';
-		const selected = $(event.target);
-
-		selected.parent('.js-sizeSelection').siblings().children('.sizeBlock--chosen').removeClass(markerClass);
-		selected.addClass(markerClass);
-	});
-	// End: Size selection
-
-	// Assign the size selections
-	$('.js-dataForm').submit(function( ) {
-		const sizes = $('.sizeBlock--chosen');
-		// console.log("sizes: ", sizes.length);
-		const sizeList = [];
-		sizes.each(function(index, item) {
-			const elem = $(item);
-			// console.log(elem.attr('data-itemId'));
-			// console.log(elem.attr('data-sizePicker'));
-			sizeList.push(`${elem.attr('data-itemId')}:${elem.attr('data-sizePicker')}`);
-			// console.log(sizeList);
-		});
-
-		$('input[type=hidden].js-sizeSelectionHidden').val(sizeList);
-	  // event.preventDefault();
-	});
-	// End: Assign the size selections
 
 	$('.js-couponCodeInput').hide();
 
@@ -72,8 +57,9 @@ $(function () {
   if ($('.js-dataInput--cardNum').length > 0) {
   	dimCardImages(false);
 
-    // it exists
-		const cleaveCardNum = new Cleave('.js-dataInput--cardNum', {  // eslint-disable-line no-unused-vars
+		// it exists
+		// no-unused-vars
+		const cleaveCardNum = new Cleave('.js-dataInput--cardNum', {   // eslint-disable-line no-unused-vars
 		  creditCard: true,
 		  onCreditCardTypeChanged: function (type) {
 		    console.log(type);
@@ -89,7 +75,7 @@ $(function () {
 	}
 
   if ($('.js-dataInput--cardExpDate').length > 0) {
-		const cleaeveCardDate = new Cleave('.js-dataInput--cardExpDate', {   // eslint-disable-line no-unused-vars
+		const cleaeveCardDate = new Cleave('.js-dataInput--cardExpDate', {  // eslint-disable-line no-unused-vars
 	    date: true,
 	    datePattern: ['m', 'y'],
 	    delimiter: '/'
@@ -135,15 +121,6 @@ $(function () {
 		$(cardTypeMask).hide();
 	}
 
-	if ($('.js-cvvInstructions').length > 0) {
-		$('.js-cvvInstructions').click(function(e) {
-	    e.stopPropagation();
-
-			const $link = $('.js-lightboxClose');
-			location.href = $link.attr('href');
-		});
-	}
-
 	$('.dataForm__section .inputGroup input').focusout((event) => {
 		const input = $(event.target);
 	  const textVal = input.val();
@@ -165,7 +142,6 @@ $(function () {
 		minimumResultsForSearch: Infinity
 	});
 });
-
 
 
 
